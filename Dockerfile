@@ -13,9 +13,9 @@ RUN echo "deb http://apt.insynchq.com/ubuntu trusty non-free contrib" > /etc/apt
     insync-headless
 
 # configure locales and timezone
-RUN locale-gen en_GB.UTF-8 fr_CH.UTF-8 en_US.UTF-8 && \
-    cp /usr/share/zoneinfo/Europe/Zurich /etc/localtime && \
-    echo "Europe/Zurich" > /etc/timezone
+RUN locale-gen en_US.UTF-8 && \
+    cp /usr/share/zoneinfo/US/Pacific /etc/localtime && \
+    echo "US/Pacific" > /etc/timezone
 
 # s6 install and config
 COPY bin/* /usr/bin/
