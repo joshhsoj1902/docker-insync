@@ -5,14 +5,12 @@ MAINTAINER Christophe Burki, christophe.burki@gmail.com
 RUN apt-get update && apt-get install -y --no-install-recommends \
     locales \
     wget && \
-    apt-get autoremove -y && \
-    apt-get clean
+    apt-get autoremove -y
 
 RUN echo "deb http://apt.insynchq.com/ubuntu trusty non-free contrib" > /etc/apt/sources.list.d/insync.list && \
     wget --no-check-certificate -O - https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key | apt-key add - && \
     apt-get update && apt-get install -y --no-install-recommends \
-    insync-headless && \
-    apt-get clean
+    insync-headless
 
 # configure locales and timezone
 RUN locale-gen en_GB.UTF-8 fr_CH.UTF-8 en_US.UTF-8 && \
