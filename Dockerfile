@@ -14,8 +14,8 @@ RUN echo "deb http://apt.insynchq.com/ubuntu trusty non-free contrib" > /etc/apt
 
 # configure locales and timezone
 RUN locale-gen en_US.UTF-8 && \
-    cp /usr/share/zoneinfo/US/Pacific /etc/localtime && \
-    echo "US/Pacific" > /etc/timezone
+    cp /usr/share/zoneinfo/US/Eastern /etc/localtime && \
+    echo "US/Eastern" > /etc/timezone
 
 # s6 install and config
 COPY bin/* /usr/bin/
