@@ -12,7 +12,7 @@ Build the image
 To create this image, execute the following command in the docker-insync folder.
 
     docker build \
-        -t rberidon/insync \
+        -t joshhsoj1902/docker-insync \
         .
         
 
@@ -26,7 +26,7 @@ to add your Google account and eventually select the files to synchronize.
         --name insync \
         --volumes-from <data volume container> \
 	      -d \
-        rberidon/insync:latest
+        joshhsoj1902/docker-insync:latest
 
 
 Setup insync
